@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RPG-game</title>
+</head>
+<body>
+    <h2>Привет! ты зашел в RPG-игру. Если у тебя уже есть аккаунт,
+        вводи свои данные для входа. Если нет, введенные данные
+        будут использованы для регистрации.
+        ✅️Введи свое имя:
+    </h2>
+    <form method="post" action="/reg/">
+        {% csrf_token %}
+        <p>Никнейм:<br> <input name="name" /></p>
+        <p>Пароль:<br> <input name="pass" /></p>
+        <p>Кодовое слово:<br> <input name="cod" /></p>
+        <input type="submit" value="Отправить" />
+    </form>
+</body>
+</html>
