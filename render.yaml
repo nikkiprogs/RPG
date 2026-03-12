@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: RPG
+    region: oregon
+    plan: free
+    buildCommand: "python -m pip install -r Django.txt"
+    startCommand: "gunicorn RPG.wsgi:application --bind 0.0.0.0:10000"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "${REnder_EXTERNAL_HOSTNAME}"
