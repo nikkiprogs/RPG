@@ -25,7 +25,6 @@ def health_check(request):
 
 urlpatterns = [
     path('health/', health_check),
-    path('', include('game.urls')),
     path('admin/', admin.site.urls),
     path('', views.form_one, name = 'home'),
     path('home/', views.form_one, name = 'home'),
@@ -37,3 +36,4 @@ urlpatterns = [
     path('udalenie/', views.udalenie, name = 'udalenie'),
 
 ]
+
