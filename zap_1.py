@@ -65,7 +65,7 @@ def open():
  while True:
   drivery = webdriver.Chrome(options=options)
   drivery.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-  url='https://rpg_game.onrender.com/'
+  url='https://rpg-nj34.onrender.com'
   drivery.get(url)
   time.sleep(30)
   drivery.quit()
@@ -116,5 +116,6 @@ net=threading.Event()
 tu=threading.Thread(target=op, args=[net], daemon=False)
 tu.start()
 open()
+
 
 
