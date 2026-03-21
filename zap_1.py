@@ -100,7 +100,7 @@ def op(net, interval = 0):
  while True:
   driver = webdriver.Chrome(options=options)
   driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-  ur='https://zaps.onrender.com'
+  ur='https://rpg-zaps.onrender.com'
   driver.get(ur)
   time.sleep(30)
   driver.quit()
